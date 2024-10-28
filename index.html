@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css"
+    />
+    <!--~~~~~~~~~~~~~~~ Swiper's CSS ~~~~~~~~~~~~~~~-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <link rel="stylesheet" href="output.css" />
+  </head>
+  <body>
+    <header id="navbar" class="bg-transparent fixed w-full top-0 left-0 z-50">
+      <nav class="container flex items-center justify-between h-16 sm:h-20">
+        <div class="font-Lobster sm:text-2xl italic">Filedownload</div>
+
+        <div
+          id="nav-menu"
+          class="absolute top-0 -left-[-100%] min-h-[80vh] w-full bg-transparent backdrop-blur-sm flex items-center justify-center duration-300 overflow-hidden lg:static lg:min-h-fit lg:bg-transparent lg:w-auto"
+        >
+          <ul class="flex flex-col items-center gap-8 lg:flex-row">
+            <li>
+              <a href="#home" class="nav-link active">Home</a>
+            </li>
+            <li>
+              <a href="#about" class="nav-link">About</a>
+            </li>
+            <li>
+              <a href="#popular" class="nav-link">Popular</a>
+            </li>
+            <li>
+              <a href="#review" class="nav-link">Review</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="text-xl sm:text-3xl cursor-pointer z-50 lg:hidden">
+          <i class="ri-menu-4-line" id="hamburger"></i>
+        </div>
+      </nav>
+    </header>
+
+    <!--~~~~~~~~~~~~~~~ Home ~~~~~~~~~~~~~~~-->
+    <section id="home" class="relative">
+      <div class="container">
+        <!-- blob-1 -->
+        <div
+          class="w-64 h-64 bg-gray-700 rounded-full blur-3xl -z-10 opacity-40 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+        ></div>
+
+        <!-- blob-2 -->
+        <div
+          class="w-64 h-64 bg-gray-700 rounded-full blur-3xl -z-10 opacity-40 absolute right-0 bottom-0"
+        ></div>
+
+        <div class="flex flex-col items-center gap-5 lg:flex-row">
+          <!-- content -->
+          <div class="home_data w-full space-y-5 lg:w-1/2">
+            <h1>
+              <span class="text-yellow-500">Web</span> Devlopment<br />
+              positive
+              <span class="text-yellow-500">impact</span> on <br />
+              your environment
+            </h1>
+
+            <p class="text-stone-300 font-Lobster">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Distinctio fugiat eveniet, reprehenderit veritatis aut explicabo
+              voluptatum ullam itaque tenetur numquam!
+            </p>
+
+            <div
+              class="flex flex-col gap-2 sm:flex-row md:gap-4 lg:pt-5 xl:pt-10"
+            >
+              <form id="file-select" class="flex items-center space-x-6 btn">
+                <input
+                  type="file"
+                  id="fileInput"
+                  class="block w-full text-sm text-white file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-white-500 file:stone-stone-700 hover:file:bg-yellow-500"
+                  accept="application/pdf"
+                />
+              </form>
+
+              <button id="downloadBtn" class="btn btn_outline" disabled>
+                Download PDF
+              </button>
+            </div>
+
+            <p class="text-xl font-Lobster text-stone-300">
+              You will get 30-days free trial.
+            </p>
+
+            <div class="flex items-center gap-5 text-xl lg:pt-10">
+              <i
+                class="ri-facebook-fill text-stone-300 hover:text-yellow-500 duration-300 cursor-pointer"
+              ></i>
+              <i
+                class="ri-twitter-x-line text-stone-300 hover:text-yellow-500 duration-300 cursor-pointer text-base"
+              ></i>
+              <i
+                class="ri-instagram-line text-stone-300 hover:text-yellow-500 duration-300 cursor-pointer"
+              ></i>
+              <i
+                class="ri-linkedin-fill text-stone-300 hover:text-yellow-500 duration-300 cursor-pointer"
+              ></i>
+            </div>
+          </div>
+
+          <!-- images -->
+          <div class="w-full relative lg:w-1/2">
+            <img
+              src="3d-illustration-of-sending-files-from-mobile-phone-to-laptop-transferring-digital-documents-to-the-computer-files-transfer-protection-3d-rendering-png.webp"
+              alt="home_image"
+              class="home_image"
+            />
+
+            <!-- leaf -->
+            <div
+              class="absolute -top-10 right-0 opacity-30 xl:top-5 animate-movingY"
+            >
+              <i class="ri-upload-2-fill text-6xl text-yellow-500"></i>
+            </div>
+            <!-- flower -->
+            <div
+              class="absolute bottom-0 left-0 opacity-30 xl:bottom-12 animate-rotating"
+            >
+              <i class="ri-file-download-line text-6xl text-yellow-500"></i>
+            </div>
+            <!-- plant -->
+            <div
+              class="hidden absolute -top-8 -left-5 opacity-30 lg:block animate-scalingUp"
+            >
+              <i class="ri-share-forward-2-line text-6xl text-yellow-500"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================================== -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+      integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+      integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <!-- <script src="script.js"></script> -->
+    <!-- ===================================== -->
+    <script src="assets/js/scrollreveal.min.js"></script>
+    <!--~~~~~~~~~~ mainjs ~~~~~~~~~~-->
+    <script src="main.js"></script>
+  </body>
+</html>
